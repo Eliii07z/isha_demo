@@ -1,0 +1,134 @@
+body {
+    background-color:  #0e060b;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    letter-spacing: 15px;
+}
+
+#PI {
+    background-image: url(images/pic1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-left: 20px;
+}
+
+#FC {
+    color: white;
+    table-layout: fixed;
+}
+
+img {
+    border-radius: 80px;
+}
+
+
+#H {
+    color: white;
+    margin-left: 20px;
+}
+
+#A {
+    color: white;
+    text-align: center;
+}
+
+.slider {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: 0.6s ease;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#radio1:checked ~ .first { margin-left: 0; }
+#radio2:checked ~ .first { margin-left: -25%; }
+#radio3:checked ~ .first { margin-left: -50%; }
+#radio4:checked ~ .first { margin-left: -75%; }
+
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+
+.navigation-arrows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.arrow {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.arrow label {
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.arrow label:hover {
+    color: #00f7ff;
+}
+
+
+#radio1:checked ~ .navigation-arrows .slide1,
+#radio2:checked ~ .navigation-arrows .slide2,
+#radio3:checked ~ .navigation-arrows .slide3,
+#radio4:checked ~ .navigation-arrows .slide4 {
+    display: flex;
+}
